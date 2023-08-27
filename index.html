@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS를 알아보자.</title>
+  </head>
+  <body>
+    <h1 id="hello">안녕하세요</h1>
+
+    <script>
+      document.getElementById("hello").innerHTML = "안녕";
+      //문서(html문서)
+      // .은 ~의 라는 뜻
+      // getElementById 엘레멘트를 get해주세요!
+      // 엘레멘트가 뭐냐? html요소를 말한다.
+      // 문서의 엘레멘트를 가져와줘라 그대신 바이아이디(ID가 hello인것)Id가 hello인 html요소를 가져와라
+      // 더쉽게 해석하면
+      // html 문서의 id가 hello인 요소 찾아와!라는 뜻
+      // .innerHTML -> 그거의 내부 html
+      // 그래서 총 해석하자면
+      // html 문서의 id가 hello인 요소 찾아와 그거의 내부 html을
+
+      // document.getElementById("??").?? = '??'; -> ?? 부분 3개만 잘 채우면 상상하는 모든 것 변경가능
+      // 1. 바꿀요소id -> 2.무엇을 -> 3.어떻게
+    </script>
+
+    <h1 id="hi">JS 초보에요</h1>
+    <script>
+      document.getElementById("hi").innerHTML = "JS 고수에요";
+      // getElementById("hi") -> 셀렉터라고 부름
+    </script>
+
+    <!-- 숙제 폰트사이즈 16px로 만들기 -->
+    <h1 id="hello2">안녕하세요</h1>
+    <script>
+      document.getElementById("hello2").style.fontSize = "16px";
+    </script>
+  </body>
+</html>
