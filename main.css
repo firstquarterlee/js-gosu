@@ -1,7 +1,10 @@
 .alert-box {
-  background: rgb(124, 124, 230);
-  color: blue;
+  background: skyblue;
   padding: 20px;
+  color: white;
   border-radius: 5px;
   display: none;
 }
+/* none : 숨기는것 
+   block : 보여주는 것
+*/
