@@ -6,21 +6,50 @@
     <link rel="stylesheet" href="/main.css" />
   </head>
   <body>
+    <!-- 
     <div class="alert-box" id="alert">
-      알림창임<button onclick="알림창열기('none');">닫기</button>
+      <p>아이디입력하세요</p>
+      <button onclick="알림창열기1('none');">닫기</button>
     </div>
-    <button onclick="알림창열기('block')">버튼</button>
+    <div class="alert-box" id="alert2">
+      <p>비번입력하세요</p>
+      <button onclick="알림창열기2('none');">닫기</button>
+    </div>
+    <button onclick="알림창열기1()" id="alert">버튼1</button>
+    <button onclick="알림창열기2()" id="alert2">버튼2</button>
 
     <script>
+      function 알림창열기1() {
+        document.getElementById("alert").style.display = "block";
+      }
+
+      function 알림창열기2() {
+        document.getElementById("alert").style.display = "block";
+      }
+    </script>
+    -->
+    <div class="alert-box" id="alert">
+      <p id="title">알림창임</p>
+      <button onclick="알림창열기('none');">닫기</button>
+    </div>
+
+    <button onclick="아이디알림창()" id="alert">버튼1</button>
+    <button onclick="비번알림창()" id="alert">버튼2</button>
+
+    <script>
+      function 아이디알림창() {
+        document.getElementById("title").innerHTML = "아이디입력하셈";
+        document.getElementById("alert").style.display = "block";
+      }
+
+      function 비번알림창() {
+        document.getElementById("title").innerHTML = "비번입력하셈~";
+        document.getElementById("alert").style.display = "block";
+      }
+
       function 알림창열기(구멍) {
         document.getElementById("alert").style.display = 구멍;
       }
-
-      // function plus(구멍) {
-      //   2 + 구멍;
-      // }
-
-      plus(1);
     </script>
   </body>
 </html>
