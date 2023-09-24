@@ -5,6 +5,11 @@
   border-radius: 5px;
   display: none;
 }
-/* none : 숨기는것 
-   block : 보여주는 것
-*/
+
+.list-group {
+  display: none;
+}
+
+.show {
+  display: block;
+}
