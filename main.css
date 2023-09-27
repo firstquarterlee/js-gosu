@@ -21,9 +21,24 @@
   background: rgba(0, 0, 0, 0.5);
   z-index: 5;
   padding: 30px;
+  /*visibility: hidden; /*display: none과 비슷한데 다름*/
+  opacity: 0; /*투명도는 0 반투명은 1 */
+  /*transition: all 10s;*/
+  display: none;
 }
+
+.show-modal {
+  /*visibility: visible; /*display: none과 비슷한데 다름*/
+  opacity: 1; /*투명도는 0 반투명은 1 */
+}
+
 .white-bg {
   background: white;
   border-radius: 5px;
   padding: 30px;
+}
+
+.main-bg {
+  padding: 100px 20px;
+  background: lightgrey;
 }
