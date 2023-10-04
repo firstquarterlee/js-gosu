@@ -93,5 +93,16 @@
       //   console.log("안녕");
       // }, 1000);
     </script>
+    <script>
+      $("form").on("submit", function () {
+        var 입력한값 = document.getElementById("email").value;
+        if (입력한값 == "") {
+          alert("아이디입력안함");
+        }
+        if (/\S+@\+.\S+/.test(입력한값)) {
+          alert("이메일형식아님");
+        }
+      });
+    </script>
   </body>
 </html>
