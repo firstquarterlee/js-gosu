@@ -108,5 +108,15 @@
         $(".slide-container").css("transform", "translateX(-200vw)");
       });
     </script>
+
+    <script>
+      console.log(vat(60000));
+      console.log(vat(50000));
+      function vat(a) {
+        return a * 0.1;
+      }
+
+      vat(5000); // 부가세 계산 됨
+    </script>
   </body>
 </html>
