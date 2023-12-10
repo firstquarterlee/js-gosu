@@ -37,16 +37,39 @@
       <li class="list-group-item">And a fifth one</li>
     </ul>
 
-    <script>
-      document.querySelector("#test1");
+    <!-- 모달창 디자인 -->
+    <div class="black-bg">
+      <div class="white-bg">
+        <h4>로그인하세요</h4>
+        <button class="btn btn-danger" id="close">닫기</button>
+      </div>
+    </div>
 
-      document
-        .getElementsByClassName("navbar-toggler")[0]
-        .addEventListener("click", function () {
-          document
-            .getElementsByClassName("list-group")[0]
-            .classList.toggle("show");
-        });
+    <!-- 로그인 클릭하면 모달창 뜨고 사라지고 버튼 -->
+    <button>로그인</button>
+
+    <p class="hello">안녕</p>
+    <p class="hello">안녕</p>
+    <p class="hello">안녕</p>
+    <button id="test-btn">버튼</button>
+
+    <!-- jQuery cdn -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      //document.querySelector(".hello").innerHTML = "바보";
+      $("#test-btn").on("click", function () {
+        $(".hello").slideUp(); //애니메이션 적용
+      });
+
+      $(".navbar-toggler").on("click", function () {
+        document.querySelectorAll(".list-group")[0].classList.toggle("show");
+      });
     </script>
 
     <!-- 부트스트랩 사용 Get start -->
