@@ -26,20 +26,24 @@
 
         <form action="success.html">
           <div class="my-3">
-            <input type="text" class="form-control" />
+            <input type="text" class="form-control" id="email" />
           </div>
           <div class="my-3">
             <input type="password" class="form-control" />
           </div>
-          <button type="submit" class="btn btn-primary">전송</button>
+          <button type="submit" class="btn btn-primary" id="send">전송</button>
           <button type="button" class="btn btn-danger" id="close">닫기</button>
         </form>
       </div>
     </div>
 
     <script>
-      // 전송버튼 누르면
-      // 저기 input에 입력한값이 공백이면 알림창띄워주세요~
+      $("form").on("submit", function (e) {
+        if (document.getElementById("email").value == "") {
+          e.preventDefault(); //폼 전송 막을 수 있음
+          alert("아이디입력안함");
+        }
+      });
     </script>
 
     <!-- Navbar -->
