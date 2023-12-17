@@ -18,7 +18,7 @@
 
     <title>Hello, world!</title>
   </head>
-  <body>
+  <body class="">
     <!-- 모달창 디자인 -->
     <div class="black-bg">
       <div class="white-bg">
@@ -37,24 +37,37 @@
       </div>
     </div>
 
-    <script>
-      $("form").on("submit", function (e) {
-        if (document.getElementById("email").value == "") {
-          e.preventDefault(); //폼 전송 막을 수 있음
-          alert("아이디입력안함");
-        }
-      });
-    </script>
-
     <!-- Navbar -->
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
-        <span class="navbar-brand">Navbar</span>
+        <span class="navbar-brand">JSShop</span>
+        <span class="badge bg-dark">Dark 🔄</span>
         <button class="navbar-toggler" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
     </nav>
+
+    <script>
+      const 이름 = "kim";
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+      var count = 0;
+
+      $(".badge").on("click", function () {
+        count += 1;
+        if (count % 2 == 1) {
+          $(".badge").html("Light 🔄");
+        } else {
+          $(".badge").html("Dark 🔄");
+        }
+      });
+
+      //badge 클릭 횟수가 홀수면 클릭 시 내부 글자를 Light로 변경
+      //badge 클릭 횟수가 짝수면 클릭 시 내부 글자를 Dark로 변경
+    </script>
 
     <!-- List group -->
     <ul class="list-group" id="test1">
